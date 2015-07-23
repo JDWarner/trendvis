@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # This file is closely based on tests.py from matplotlib
 #
-# This allows running the matplotlib tests from the command line: e.g.
+# This allows running the test suite from the command line: e.g.
 #
 #   $ python run_tests.py -v -d
 #
@@ -15,14 +15,14 @@ import os
 
 # remove old coverage info
 try:
-	shutil.rmtree('/cover')
+    shutil.rmtree('/cover')
 except OSError:
-	pass
+    pass
 
 try:
-	os.remove('.coverage')
+    os.remove('.coverage')
 except OSError:
-	pass
+    pass
 
 
 env = {"NOSE_WITH_COVERAGE": 1,
